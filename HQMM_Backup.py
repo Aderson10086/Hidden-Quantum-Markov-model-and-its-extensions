@@ -1,9 +1,3 @@
-#  Copyright (c) 2021. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-#  Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
-#  Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
-#  Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
-#  Vestibulum commodo. Ut rhoncus gravida arcu.
-
 # 求解hidden quantum Markov model 和 split hidden quantum Markov model的代码
 import autograd.numpy as np
 from autograd import elementwise_grad as egrad
