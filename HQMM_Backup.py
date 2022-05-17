@@ -969,7 +969,7 @@ class split_hidden_quantum_Markov_model(hidden_quantum_Markov_model_setup):
 
     def __Inner_Product(self, M):
         return np.dot(self.dagger(M), M)
-
+#保存计算得到的Kraus算符的矩阵解
     def saveData(self, k):
         if 'win' in sys.platform:
             if self.class_num == 3 and self.IP == 3:
@@ -1092,7 +1092,7 @@ class split_hidden_quantum_Markov_model(hidden_quantum_Markov_model_setup):
                     np.savetxt("Result\\Kraus_Training_Result74\\Gamma%d_real" % k, np.real(self.Gamma_initial))
                     np.savetxt("Result\\Kraus_Training_Result74\\Gamma%d_imag" % k, np.imag(self.Gamma_initial))
 
-
+#根据操作系统不同保存数据的方式也不同
         elif 'linux' in sys.platform:
             if self.class_num == 3 and self.IP == 3:
                 re = os.path.exists("Result/Kraus_Training_Result33")
@@ -1366,7 +1366,7 @@ class split_hidden_quantum_Markov_model(hidden_quantum_Markov_model_setup):
                 Gamma_trained = np.loadtxt("Result/Kraus_Training_Result74/Gamma%d_real" % k) + 1j * np.loadtxt(
                     "Result/Kraus_Training_Result74/Gamma%d_imag" % k)
                 return K_trained, R_trained, A_trained, S_trained, U_trained, V_trained, Gamma_trained
-
+#可视化不同条件密度矩阵之间的连接关系
     @staticmethod
     def Show_Network(str=False):
         fig = plt.figure(
